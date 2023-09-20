@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #1a3045;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ageofempires4ladderstats.CivMapWinRate">
+   <children>
+      <ImageView fx:id="playerImage" fitHeight="56.0" fitWidth="104.0" layoutX="-10.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Civs/Rus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="enemyImage" fitHeight="56.0" fitWidth="104.0" layoutX="-10.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Civs/Rus.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="536.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045; -fx-blend-mode: ;" text="back" textFill="GOLD">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <TableView layoutX="60.0" layoutY="156.0" prefHeight="244.0" prefWidth="539.0" style="-fx-background-color: #1a3045; -fx-border-color: #FFD700;">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="97.0" text="C2" />
+         </columns>
+      </TableView>
+      <ImageView fx:id="mapImage" fitHeight="110.0" fitWidth="111.0" layoutX="89.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Maps/RandomMap.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

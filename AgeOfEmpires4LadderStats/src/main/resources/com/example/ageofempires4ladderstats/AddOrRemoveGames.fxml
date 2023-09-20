@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #1a3045;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ageofempires4ladderstats.AddOrRemoveGames">
+   <children>
+      <ImageView fx:id="mapImage" fitHeight="229.0" fitWidth="225.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Maps/RandomMap.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="mapPickLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="286.0" prefHeight="53.0" prefWidth="180.0" text="Map:" textFill="GOLD">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="yourCivLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="339.0" prefHeight="53.0" prefWidth="180.0" text="Your Civ:" textFill="GOLD">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="enemyCivLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="392.0" prefHeight="53.0" prefWidth="180.0" text="Enemy Civ:" textFill="GOLD">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="mapPickComboBox" layoutX="194.0" layoutY="295.0" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" />
+      <ComboBox fx:id="yourCivComboBox" layoutX="194.0" layoutY="348.0" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" />
+      <ComboBox fx:id="enemyCivComboBox" layoutX="194.0" layoutY="401.0" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" />
+      <ImageView fx:id="playerImage" fitHeight="56.0" fitWidth="104.0" layoutX="269.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Civs/Rus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="enemyImage" fitHeight="56.0" fitWidth="104.0" layoutX="443.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Civs/Rus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="swordsImage" fitHeight="56.0" fitWidth="104.0" layoutX="377.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/UI/goldSword.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="resultLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="445.0" prefHeight="53.0" prefWidth="180.0" text="Result:" textFill="GOLD">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="resultComboBox" layoutX="194.0" layoutY="454.0" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" />
+      <Button fx:id="submitMatchButton" layoutX="377.0" layoutY="292.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045; -fx-blend-mode: ;" text="Submit Match" textFill="GOLD">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="536.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045; -fx-blend-mode: ;" text="back" textFill="GOLD">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
