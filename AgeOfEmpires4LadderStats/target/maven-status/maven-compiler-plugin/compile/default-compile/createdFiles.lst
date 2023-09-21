@@ -1,0 +1,7 @@
+com\example\ageofempires4ladderstats\AddOrRemoveGames.class
+com\example\ageofempires4ladderstats\DBHandler.class
+module-info.class
+com\example\ageofempires4ladderstats\AOE4Controller.class
+com\example\ageofempires4ladderstats\CivMapWinRate.class
+com\example\ageofempires4ladderstats\AOE4Application.class
+com\example\ageofempires4ladderstats\CivVSCivResults.class

@@ -54,10 +54,5 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <Button fx:id="changeRankButton" layoutX="436.0" layoutY="135.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" text="back" textFill="GOLD">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>
