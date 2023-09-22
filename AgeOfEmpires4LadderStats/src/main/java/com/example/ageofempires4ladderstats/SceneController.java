@@ -20,6 +20,8 @@ public class SceneController {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        File file2 = new File("src/main/resources/com/example/ageofempires4ladderstats/layout.css");
+        scene.getStylesheets().add(String.valueOf(file2.toURL()));
         stage.show();
     }
     public void switchToAddOrRemoveGamesScene(ActionEvent event) throws IOException {

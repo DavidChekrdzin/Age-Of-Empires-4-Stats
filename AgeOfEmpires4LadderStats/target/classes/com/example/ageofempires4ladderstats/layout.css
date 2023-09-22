@@ -2,3 +2,22 @@
   -fx-text-fill: gold;
   -fx-background:  #1a3045;
 }
+.table-row-cell {
+    -fx-cell-size: 59px;
+    -fx-text-fill: gold;
+    -fx-background-color: #1a3045;
+}
+.table-cell {
+    -fx-border-color: gold;
+    -fx-text-fill: gold;
+    -fx-background:  #1a3045;
+}
+.table-view {
+-fx-background-color:#1a3045
+}
+.table-row-cell:selected {
+   -fx-background-color: #1a3045;
+}
+.table-column {
+  -fx-alignment: CENTER;
+}

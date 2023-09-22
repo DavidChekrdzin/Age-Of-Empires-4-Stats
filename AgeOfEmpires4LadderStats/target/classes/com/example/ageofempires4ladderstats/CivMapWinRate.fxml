@@ -10,38 +10,118 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #1a3045;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ageofempires4ladderstats.CivMapWinRate">
    <children>
-      <ImageView fx:id="playerImage" fitHeight="56.0" fitWidth="104.0" layoutX="-10.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="playerImage" fitHeight="56.0" fitWidth="60.0" layoutX="640.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../pics/Civs/9.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="enemyImage" fitHeight="56.0" fitWidth="104.0" layoutX="-10.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../pics/Civs/9.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="backButton" layoutX="14.0" layoutY="536.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#switchToMainGUIScene" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" text="back" textFill="GOLD">
+      <Button fx:id="backButton" layoutX="15.0" layoutY="736.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#switchToMainGUIScene" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" text="back" textFill="GOLD">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <TableView fx:id="tableViewCivMap" layoutX="100.0" layoutY="100.0" prefHeight="600.0" prefWidth="600.0" style=" -fx-border-color: #FFD700;">
+      <TableView fx:id="tableViewCivMap" layoutX="100.0" layoutY="100.0" prefHeight="565.0" prefWidth="610.0" style="-fx-border-color: #FFD700; -fx-background-color: #1a3045;">
          <columns>
-            <TableColumn fx:id="abbasidColumn" prefWidth="54.0" text="Abbasid" />
-            <TableColumn fx:id="chineseColumn" prefWidth="54.0" text="Chinese" />
-            <TableColumn fx:id="delhiColumn" prefWidth="54.0" text="Delhi" />
-            <TableColumn fx:id="englishColumn" prefWidth="54.0" text="English" />
-            <TableColumn fx:id="frenchColumn" prefWidth="54.0" text="French" />
-            <TableColumn fx:id="hreColumn" prefWidth="54.0" text="HRE" />
-            <TableColumn fx:id="maliansColumn" prefWidth="54.0" text="Malians" />
-            <TableColumn fx:id="mongolsColumn" prefWidth="54.0" text="Mongols" />
-            <TableColumn fx:id="ottomansColumn" prefWidth="54.0" text="Ottomans" />
-            <TableColumn fx:id="rusColumn" prefWidth="54.0" text="Rus" />
+            <TableColumn fx:id="abbasidColumn" prefWidth="60.0" resizable="false" text="Abbasid" />
+            <TableColumn fx:id="chineseColumn" prefWidth="60.0" resizable="false" text="Chinese" />
+            <TableColumn fx:id="delhiColumn" prefWidth="60.0" resizable="false" text="Delhi" />
+            <TableColumn fx:id="englishColumn" prefWidth="60.0" resizable="false" text="English" />
+            <TableColumn fx:id="frenchColumn" prefWidth="60.0" resizable="false" text="French" />
+            <TableColumn fx:id="hreColumn" prefWidth="60.0" resizable="false" text="HRE" />
+            <TableColumn fx:id="maliansColumn" prefWidth="60.0" resizable="false" text="Malians" />
+            <TableColumn fx:id="mongolsColumn" prefWidth="60.0" resizable="false" text="Mongols" />
+            <TableColumn fx:id="ottomansColumn" prefWidth="60.0" resizable="false" text="Ottomans" />
+            <TableColumn fx:id="rusColumn" prefWidth="60.0" resizable="false" text="Rus" />
          </columns>
       </TableView>
-      <ImageView fx:id="mapImage" fitHeight="110.0" fitWidth="111.0" layoutX="89.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mapImage" fitHeight="60.0" fitWidth="60.0" layoutX="39.0" layoutY="124.0" pickOnBounds="true">
          <image>
-            <Image url="@../../../../../../pics/Maps/RandomMap.png" />
+            <Image url="@../../../../../../pics/Maps/0.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="playerImage1" fitHeight="56.0" fitWidth="60.0" layoutX="580.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Civs/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="playerImage2" fitHeight="56.0" fitWidth="60.0" layoutX="520.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Civs/7.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="playerImage3" fitHeight="56.0" fitWidth="60.0" layoutX="460.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Civs/6.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="playerImage4" fitHeight="56.0" fitWidth="60.0" layoutX="400.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Civs/5.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="playerImage5" fitHeight="56.0" fitWidth="60.0" layoutX="340.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Civs/4.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="playerImage6" fitHeight="56.0" fitWidth="60.0" layoutX="280.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Civs/3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="playerImage7" fitHeight="56.0" fitWidth="60.0" layoutX="220.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Civs/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="playerImage8" fitHeight="56.0" fitWidth="60.0" layoutX="160.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Civs/1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="playerImage9" fitHeight="56.0" fitWidth="60.0" layoutX="100.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../pics/Civs/0.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mapImage1" fitHeight="60.0" fitWidth="60.0" layoutX="39.0" layoutY="184.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../pics/Maps/1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mapImage2" fitHeight="60.0" fitWidth="60.0" layoutX="39.0" layoutY="244.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../pics/Maps/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mapImage3" fitHeight="60.0" fitWidth="60.0" layoutX="39.0" layoutY="304.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../pics/Maps/3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mapImage4" fitHeight="60.0" fitWidth="60.0" layoutX="39.0" layoutY="360.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../pics/Maps/4.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mapImage5" fitHeight="60.0" fitWidth="60.0" layoutX="39.0" layoutY="420.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../pics/Maps/5.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mapImage6" fitHeight="60.0" fitWidth="60.0" layoutX="39.0" layoutY="480.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../pics/Maps/6.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mapImage7" fitHeight="60.0" fitWidth="60.0" layoutX="39.0" layoutY="540.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../pics/Maps/7.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mapImage8" fitHeight="60.0" fitWidth="60.0" layoutX="39.0" layoutY="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../pics/Maps/8.png" />
          </image>
       </ImageView>
    </children>
