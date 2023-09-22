@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -54,10 +55,6 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <Button fx:id="changeRankButton" layoutX="436.0" layoutY="135.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" text="back" textFill="GOLD">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Button>
+      <ComboBox fx:id="changeRankComboBox" layoutX="386.0" layoutY="143.0" onAction="#changeMap" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" />
    </children>
 </AnchorPane>
