@@ -13,12 +13,9 @@ import javafx.scene.layout.AnchorPane;
 import java.io.*;
 import java.net.URL;
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class AddOrRemoveGames implements Initializable {
-    @FXML
-    private AnchorPane anchorPane;
     @FXML
     private Label mapPickLabel,yourCivLabel,enemyCivLabel,resultLabel;
     @FXML
