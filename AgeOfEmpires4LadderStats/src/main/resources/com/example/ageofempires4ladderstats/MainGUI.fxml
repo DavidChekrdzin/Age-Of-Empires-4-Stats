@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,22 +11,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #1a3045;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ageofempires4ladderstats.AOE4Controller">
    <children>
-      <Label fx:id="usernameLabel" alignment="CENTER" layoutY="32.0" prefHeight="53.0" prefWidth="600.0" text="Username" textFill="GOLD">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
       <ImageView fx:id="rankImage" fitHeight="150.0" fitWidth="150.0" layoutX="228.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../pics/Ranks/bronze.jpg" />
+            <Image url="@../../../../../../pics/Ranks/0.jpg" />
          </image>
       </ImageView>
+      <ComboBox fx:id="changeRankComboBox" layoutX="386.0" layoutY="143.0" onAction="#changeRank" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" />
       <Label fx:id="winLossLabel" alignment="CENTER" layoutY="235.0" prefHeight="53.0" prefWidth="600.0" text="0 Wins / 0 Losses" textFill="GOLD">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="winPercentageLabel" alignment="CENTER" layoutY="288.0" prefHeight="53.0" prefWidth="600.0" text="0% Wins" textFill="GOLD">
+      <Label fx:id="winPercentageLabel" alignment="CENTER" layoutX="6.0" layoutY="288.0" prefHeight="53.0" prefWidth="600.0" text="0% Wins" textFill="GOLD">
          <font>
             <Font size="36.0" />
          </font>
@@ -50,11 +47,15 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="changeUsernameButton" layoutX="436.0" layoutY="34.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" text="back" textFill="GOLD">
+      <TextField fx:id="userNameTextBox" alignment="CENTER" editable="false" layoutY="14.0" onKeyPressed="#enterPressed" prefHeight="79.0" prefWidth="600.0" style="-fx-background-color: #1a3045; -fx-border-color: #FFD700; -fx-text-fill: #FFD700;" text="Username">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </TextField>
+      <Button fx:id="changeUsernameButton" alignment="CENTER" contentDisplay="CENTER" layoutX="526.0" layoutY="24.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#changeName" prefHeight="60.0" prefWidth="60.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045; -fx-border-width: 1;" textAlignment="CENTER" textFill="GOLD">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <ComboBox fx:id="changeRankComboBox" layoutX="386.0" layoutY="143.0" onAction="#changeMap" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" />
    </children>
 </AnchorPane>

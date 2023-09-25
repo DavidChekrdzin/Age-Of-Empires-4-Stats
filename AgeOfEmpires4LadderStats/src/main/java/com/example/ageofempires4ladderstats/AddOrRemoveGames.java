@@ -16,6 +16,7 @@ import java.sql.*;
 import java.util.ResourceBundle;
 
 public class AddOrRemoveGames implements Initializable {
+    //Setting up all variables
     @FXML
     private Label mapPickLabel,yourCivLabel,enemyCivLabel,resultLabel;
     @FXML
@@ -29,13 +30,14 @@ public class AddOrRemoveGames implements Initializable {
     private String[]maps = {"BOULDER BAY","DRY ARABIA","GOLDEN HEIGHTS","HIDEOUT","HIGH VIEW","HILL AND DALE","MARSHLAND","THE PIT","VOLCANIC ISLAND"};
     private String[]result = {"WIN","LOSS"};
 
+    //When you press the back button sceneControllers switches to MainGUI
     public void switchToMainGUIScene(ActionEvent event) throws IOException {
         sceneController.switchToMainGUIScene(event);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        //Initializing all the combo boxes and the corresponding arrays
         yourCivComboBox.getItems().addAll(civs);
         yourCivComboBox.getSelectionModel().select(civs[5]);
 
@@ -47,7 +49,22 @@ public class AddOrRemoveGames implements Initializable {
 
         resultComboBox.getItems().addAll(result);
         resultComboBox.getSelectionModel().select(result[0]);
+
+        //making the back button have a picture of back arrow
+        InputStream buttonPicStream = null;
+        try {
+            buttonPicStream = new FileInputStream("pics/UI/backArrow.png");
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        Image buttonImg = new Image(buttonPicStream);
+        ImageView buttonImgView = new ImageView(buttonImg);
+        buttonImgView.setPreserveRatio(true);
+        buttonImgView.setFitWidth(34);
+        backButton.setGraphic(buttonImgView);
+
     }
+    //if you change the civ from the combo box the picture will change also
     public void changeYourCiv() throws FileNotFoundException {
         int i = yourCivComboBox.getSelectionModel().getSelectedIndex();
 
@@ -57,6 +74,7 @@ public class AddOrRemoveGames implements Initializable {
             playerImage.setImage(image);
         }
     }
+    //if you change the civ from the combo box the picture will change also
     public void changeEnemyCiv() throws FileNotFoundException {
         int i = enemyCivComboBox.getSelectionModel().getSelectedIndex();
 
@@ -66,6 +84,7 @@ public class AddOrRemoveGames implements Initializable {
             enemyImage.setImage(image);
         }
     }
+    //if you change the map from the combo box the picture will change also
     public void changeMap() throws FileNotFoundException {
         int i = mapPickComboBox.getSelectionModel().getSelectedIndex();
 
@@ -75,6 +94,7 @@ public class AddOrRemoveGames implements Initializable {
             mapImage.setImage(image);
         }
     }
+
     public void changeWin(){
         if (resultComboBox.getSelectionModel().getSelectedIndex() == 0) {
         }

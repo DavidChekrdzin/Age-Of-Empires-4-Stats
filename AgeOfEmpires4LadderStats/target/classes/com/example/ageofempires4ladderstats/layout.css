@@ -21,3 +21,21 @@
 .table-column {
   -fx-alignment: CENTER;
 }
+.text-input {
+  -fx-text-fill: gold;
+  -fx-background:  #1a3045;
+}
+.text-field{
+  -fx-text-fill: gold;
+  -fx-background:  #1a3045;
+}
+.combo-box{
+-fx-text-fill: gold;
+}
+.list-cell{
+-fx-text-fill: gold;
+}
+.combo-box .list-view .list-cell
+{
+-fx-text-fill: gold;
+}

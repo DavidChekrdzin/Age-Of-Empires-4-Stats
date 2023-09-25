@@ -9,10 +9,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
@@ -51,6 +51,18 @@ public class CivVSCivResults implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        InputStream buttonPicStream = null;
+        try {
+            buttonPicStream = new FileInputStream("pics/UI/backArrow.png");
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        Image buttonImg = new Image(buttonPicStream);
+        ImageView buttonImgView = new ImageView(buttonImg);
+        buttonImgView.setPreserveRatio(true);
+        buttonImgView.setFitWidth(34);
+        backButton.setGraphic(buttonImgView);
+
         File file = new File("aoe4db.db");
         String jdbcUrl = "jdbc:sqlite:" + file.getAbsolutePath();
 

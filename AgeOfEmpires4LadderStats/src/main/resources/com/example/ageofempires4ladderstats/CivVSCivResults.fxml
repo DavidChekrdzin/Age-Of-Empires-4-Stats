@@ -16,7 +16,7 @@
             <Image url="@../../../../../../pics/Civs/9.png" />
          </image>
       </ImageView>
-      <Button fx:id="backButton" layoutX="15.0" layoutY="736.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#switchToMainGUIScene" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" text="back" textFill="GOLD">
+      <Button fx:id="backButton" layoutX="15.0" layoutY="736.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#switchToMainGUIScene" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" textFill="GOLD">
          <font>
             <Font size="24.0" />
          </font>
