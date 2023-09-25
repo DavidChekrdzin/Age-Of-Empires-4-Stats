@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class CivVSCivResults implements Initializable {
+    //Setting up all variables
     public TableView tableViewCivVsCiv;
     public Button backButton;
     @FXML
@@ -45,12 +46,14 @@ public class CivVSCivResults implements Initializable {
     private ArrayList<String> winCivPer = new ArrayList<>();
 
     private SceneController sceneController = new SceneController();
+    //if user clicks back button change scene
     public void switchToMainGUIScene(ActionEvent event) throws IOException {
         sceneController.switchToMainGUIScene(event);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //set the back arrow pic as the back button picture
         InputStream buttonPicStream = null;
         try {
             buttonPicStream = new FileInputStream("pics/UI/backArrow.png");
@@ -63,11 +66,9 @@ public class CivVSCivResults implements Initializable {
         buttonImgView.setFitWidth(34);
         backButton.setGraphic(buttonImgView);
 
+        //connect to the database and load all the results of all civilizations vs all civilizations,calculate win rate in percentages and store it in the list winCivPer
         File file = new File("aoe4db.db");
         String jdbcUrl = "jdbc:sqlite:" + file.getAbsolutePath();
-
-
-
         for(int i=0;i<civs.length;i++){
             String civColumn = civs[i];
             for(int j=0;j<civs.length;j++){
@@ -117,6 +118,7 @@ public class CivVSCivResults implements Initializable {
                 }
             }
         }
+        //add all the results into the table
         final ObservableList<MatchObjModel> data = FXCollections.observableArrayList(
                 new MatchObjModel(winCivPer.get(0), winCivPer.get(1), winCivPer.get(2),winCivPer.get(3),winCivPer.get(4),winCivPer.get(5),winCivPer.get(6),winCivPer.get(7),winCivPer.get(8),winCivPer.get(9)),
                 new MatchObjModel(winCivPer.get(10), winCivPer.get(11), winCivPer.get(12),winCivPer.get(13),winCivPer.get(14),winCivPer.get(15),winCivPer.get(16),winCivPer.get(17),winCivPer.get(18),winCivPer.get(19)),

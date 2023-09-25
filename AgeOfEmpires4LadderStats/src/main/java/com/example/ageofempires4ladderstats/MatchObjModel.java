@@ -1,6 +1,8 @@
 package com.example.ageofempires4ladderstats;
 
+//class for Match object model
 public class MatchObjModel {
+    //Setting up all variables
     private String abbasidVs;
     private String chineseVs;
     private String delhiVs;

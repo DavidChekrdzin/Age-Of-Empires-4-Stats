@@ -95,10 +95,7 @@ public class AddOrRemoveGames implements Initializable {
         }
     }
 
-    public void changeWin(){
-        if (resultComboBox.getSelectionModel().getSelectedIndex() == 0) {
-        }
-    }
+    //when user clicks the submit match button the app connects to the database and puts in all the data the user selected
     public void submitMatch(ActionEvent event) throws IOException{
         File databaseLocation = new File("aoe4db.db");
         String jdbcUrl = "jdbc:sqlite:" + databaseLocation.getAbsolutePath();
@@ -108,11 +105,13 @@ public class AddOrRemoveGames implements Initializable {
         String mapText = mapPickComboBox.getSelectionModel().getSelectedItem().toString();
         int matchResult = resultComboBox.getSelectionModel().getSelectedIndex();
 
+        //this is just so you can check if the data submitted is the same as the one you entered
         System.out.println(yourCivText);
         System.out.println(enemyCivText);
         System.out.println(mapText);
         System.out.println(matchResult);
 
+        //insert data into the database
         try {
             Connection connection = DriverManager.getConnection(jdbcUrl);
             String sql = "INSERT INTO MATCH_HISTORY(PLAYERCIV,ENEMYCIV,MAP,WIN) values('"+ yourCivText + "','"+ enemyCivText +"','"+ mapText +"'," + matchResult +");";
@@ -124,6 +123,7 @@ public class AddOrRemoveGames implements Initializable {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        //after submitting the data is finished go back to the main GUI
         sceneController.switchToMainGUIScene(event);
     }
 }

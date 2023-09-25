@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class CivMapWinRate implements Initializable {
-
+    //Setting up all variables
     public TableView tableViewCivVsCiv;
     @FXML
     private ImageView playerImage;
@@ -56,6 +56,7 @@ public class CivMapWinRate implements Initializable {
     private String[]civs = {"ABBASID DYNASTY","CHINESE","DELHI SULTANATE","ENGLISH","FRENCH","HOLY ROMAN EMPIRE","MALIANS","MONGOLS","OTTOMANS","RUS",};
     private String[]maps = {"BOULDER BAY","DRY ARABIA","GOLDEN HEIGHTS","HIDEOUT","HIGH VIEW","HILL AND DALE","MARSHLAND","THE PIT","VOLCANIC ISLAND"};
     private ArrayList<String> winMapPer = new ArrayList<>();
+    //if user clicks back button change scene
     public void switchToMainGUIScene(ActionEvent event) throws IOException {
         sceneController.switchToMainGUIScene(event);
     }
@@ -63,6 +64,7 @@ public class CivMapWinRate implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //set the back arrow pic as the back button picture
         InputStream buttonPicStream = null;
         try {
             buttonPicStream = new FileInputStream("pics/UI/backArrow.png");
@@ -75,12 +77,9 @@ public class CivMapWinRate implements Initializable {
         buttonImgView.setFitWidth(34);
         backButton.setGraphic(buttonImgView);
 
-
+        //connect to the database and load all the results of all civilizations on all maps,calculate win rate in percentages and store it in the list winMapPer
         File file = new File("aoe4db.db");
         String jdbcUrl = "jdbc:sqlite:" + file.getAbsolutePath();
-
-
-
         for(int i=0;i<maps.length;i++){
             String map = maps[i];
             for(int j=0;j<civs.length;j++){
@@ -130,6 +129,7 @@ public class CivMapWinRate implements Initializable {
                 }
             }
         }
+        //add all the results into the table
         final ObservableList<MatchObjModel> data = FXCollections.observableArrayList(
                         new MatchObjModel(winMapPer.get(0), winMapPer.get(1), winMapPer.get(2),winMapPer.get(3),winMapPer.get(4),winMapPer.get(5),winMapPer.get(6),winMapPer.get(7),winMapPer.get(8),winMapPer.get(9)),
                         new MatchObjModel(winMapPer.get(10), winMapPer.get(11), winMapPer.get(12),winMapPer.get(13),winMapPer.get(14),winMapPer.get(15),winMapPer.get(16),winMapPer.get(17),winMapPer.get(18),winMapPer.get(19)),

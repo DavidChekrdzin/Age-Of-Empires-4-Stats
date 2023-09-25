@@ -53,7 +53,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <ComboBox fx:id="resultComboBox" layoutX="194.0" layoutY="454.0" onAction="#changeWin" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" />
+      <ComboBox fx:id="resultComboBox" layoutX="194.0" layoutY="454.0" prefHeight="35.0" prefWidth="150.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" />
       <Button fx:id="submitMatchButton" layoutX="377.0" layoutY="292.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onAction="#submitMatch" prefHeight="200.0" prefWidth="200.0" style="-fx-border-radius: 100; -fx-border-color: #FFD700; -fx-background-color: #1a3045;" text="Submit Match" textFill="GOLD">
          <font>
             <Font size="24.0" />

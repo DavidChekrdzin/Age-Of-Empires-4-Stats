@@ -20,6 +20,7 @@ import java.sql.*;
 import java.util.ResourceBundle;
 
 public class AOE4Controller implements Initializable {
+    //Setting up all variables
     @FXML
     private TextField userNameTextBox;
     @FXML
@@ -40,16 +41,20 @@ public class AOE4Controller implements Initializable {
 
     private int rankNum;
 
+    //if user clicks add or remove games change scene
     public void switchToAddOrRemoveGamesScene(ActionEvent event) throws IOException {
         sceneController.switchToAddOrRemoveGamesScene(event);
     }
+    //if user clicks civ map win rate or remove games change scene
     public void switchToCivMapWinRateScene(ActionEvent event) throws IOException {
         sceneController.switchToCivMapWinRateScene(event);
     }
+    //if user clicks civ vs civ win rate change scene
     public void switchToCivVsCivWinRateScene(ActionEvent event) throws IOException {
         sceneController.switchToCivVsCivWinRateScene(event);
     }
 
+    //connect to the database and get number of total games, wins and losses and use that to calculate winrate %
     public void connectToDatabase(){
         File file = new File("aoe4db.db");
         String jdbcUrl = "jdbc:sqlite:" + file.getAbsolutePath();
@@ -79,6 +84,7 @@ public class AOE4Controller implements Initializable {
         winPercentageLabel.setText(((winsDecimal/(winsDecimal+lossesDecimal))*100) + "%");
         totalGamesLabel.setText(wins + losses + " Total games");
     }
+    //when user changes the rank, change the picture and save the rank the user chose
     public void changeRank(ActionEvent event) throws FileNotFoundException {
         int i = changeRankComboBox.getSelectionModel().getSelectedIndex();
 
@@ -93,10 +99,13 @@ public class AOE4Controller implements Initializable {
         }
     }
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //first load all the data from the database
         connectToDatabase();
 
+        //get the picture of a feather for the edit username button
         InputStream buttonPicStream = null;
         try {
             buttonPicStream = new FileInputStream("pics/UI/EDIT.png");
@@ -109,10 +118,8 @@ public class AOE4Controller implements Initializable {
         buttonImgView.setFitWidth(38);
         changeUsernameButton.setGraphic(buttonImgView);
 
-
-
+        //get the picture of users selected rank
         changeRankComboBox.getItems().addAll(ranks);
-
         String rank = null;
         try {
             rank = new String(Files.readAllBytes(Paths.get(rankFilePath.toURI())));
@@ -130,6 +137,7 @@ public class AOE4Controller implements Initializable {
         Image image = new Image(stream);
         rankImage.setImage(image);
 
+        //get the username of the user and display it in the text box
         String text = null;
         try {
             text = new String(Files.readAllBytes(Paths.get(usernameFilePath.toURI())));
@@ -138,10 +146,12 @@ public class AOE4Controller implements Initializable {
         }
         userNameTextBox.setText(text);
     }
+    //when user clicks the feather(change name button) focus on the text box and make it editable
     public void changeName(ActionEvent event) throws FileNotFoundException {
         userNameTextBox.setEditable(true);
         userNameTextBox.requestFocus();
     }
+    //after the user inputs the username and presses enter, save the name and make the text box uneditable
     public void enterPressed(KeyEvent keyEvent) throws FileNotFoundException {
         if(keyEvent.getCode() == KeyCode.ENTER){
             userNameTextBox.setEditable(false);

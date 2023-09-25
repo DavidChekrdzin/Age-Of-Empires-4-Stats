@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 
+//class that controls the scenes and loads the css file when needed
 public class SceneController {
 
     private Stage stage;
